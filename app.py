@@ -32,8 +32,11 @@ xc=float(st.sidebar.text_input('Lower Intensity Limit for Laplacian Pyramid Corr
 # xc = st.sidebar.slider('Lower Intensity Limit for Laplacian Pyramid Correction', 0.000, 1.000, 0.01) 
 p=np.zeros((L,1))
 for ii in range(L):
-    p[ii]=st.sidebar.slider('p-value for level-'+str(ii), 0.0, 1.0, 1.0) 
-p[0]=st.sidebar.slider('p-value for level-'+str(ii), 0.0, 1.0, 0.5)
+    if ii==0:
+        p[ii]=st.sidebar.slider('p-value for level-'+str(ii), 0.0, 1.0, 0.5)
+    else:
+        p[ii]=st.sidebar.slider('p-value for level-'+str(ii), 0.0, 1.0, 1.0) 
+
 
 
 params = {
