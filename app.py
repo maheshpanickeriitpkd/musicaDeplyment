@@ -11,7 +11,7 @@ from musica import *
 #%% User Inputs
 st.markdown("<h1 style='text-align: center; color: black;'>Interactive Image Contrast Enhancement</h1>", unsafe_allow_html=True)
   
-logoImg =  img_as_float(io.imread('logoImage.JPG',as_gray=False))
+logoImg =  img_as_float(io.imread('/logoImage.JPG',as_gray=False))
 st.sidebar.image(logoImg)
 st.sidebar.markdown("Contact: Dr. Mahesh R Panicker (mahesh@iitpkd.ac.in) ")
 st.sidebar.markdown("(c) Center for Computational Imaging, IIT Palakkad")
